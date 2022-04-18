@@ -1,0 +1,2 @@
+# CubeCurses
+Página de práctica
