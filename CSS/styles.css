@@ -1,0 +1,406 @@
+/*  USANDO LA METODOLOGÍA MOBILE FIRST  */
+
+/*  FUENTE PARA TEXTOS  */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+/*  CAMBIANDO LOS VALORES QUE TRAE EL NAVEGADOR POR DEFECTO  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*  COLOR DE LA PÁGINA*/
+body{
+    background-color: #1a1d26;
+}
+
+/* APLICANDO ESTILO AL ENCABEZADO */
+header{
+    /*  FLEXBOX   */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-transform: uppercase;
+    background-color: rgb(4, 31, 44);
+    height: 10vh;
+    font-family: 'Red Hat Text', sans-serif;
+    font-size: 70%;
+    box-shadow: 0px 0px 7px #000000ff;
+    border-bottom: 2px ridge rgb(126, 255, 143);
+    animation: Anim_Header 1s ease alternate;
+}
+
+/*  QUITANDO EL ESTILO PREDETERMINADO A LOS ENLACES*/
+header a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+/* ACTIVAR ANIMACIÓN AL HACER CLICK EN LOS BOTONES DEL HEADER*/
+header .botonesMenu:focus{
+    animation: Anim_Botones 2s ease alternate;
+    border-bottom: 2px solid rgb(126, 255, 143);
+}
+
+/*  HOVER A LOS BOTONES DEL HEADER  */
+header .botonesMenu:hover{
+    color: rgba(126, 255, 143, 150);
+    transition: .1s ease;
+}
+
+/*  AJUSTANTO IMAGEN CON EL TEXTO   */
+.link-logo{
+    /*  FLEXBOX   */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-transform:none;
+}
+
+/*  APLICANDO EL TAMAÑO DE IMAGEN   */
+.logo{
+    width: 48px;
+    height: 48px;
+}
+
+/*  CAMBIANDO EL COLOR DEL TEXTO DEL LOGO   */
+.NombreLogo{
+    color: rgb(126, 255, 143);
+}
+
+/*  AJUSTANDO LAS LISTAS*/
+.menu ul{
+    /*  FLEXBOX   */
+    display: flex;
+    justify-content: space-around;
+}
+
+/*  CAMBIANDO ESTILO DE LAS LISTAS Y ACTIVANDO ANIMACIÓN    */
+.menu li{
+    list-style: none;
+    margin: 0px 2px;
+    animation: Anim_List 1s ease alternate;
+}
+
+/*  MARGEN INTERNO ENTRE LAS LISTAS */
+.menu li a{
+    padding: 5px;
+}
+
+/*  HACIENDO FLEXIBLE EL MAIN */
+main{
+    /*  FLEXBOX */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/*  APLICANDO TAMAÑO DE LA PORTADA*/
+.portada{
+    display: flex;
+    flex-flow: column wrap;
+    flex-direction: row;
+    background-image: url("https://i.blogs.es/af261d/escape_velocity/840_560.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+    width: 100%;
+    height: 100vh;
+    
+}
+
+/*  ESTILO DE IMAGENES Y SUBTÍTULOS */
+.subtitulos{
+    /*  FLEXBOX */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20%;
+    text-align: center;
+    color: #fff;
+    font-family: 'Rubik', sans-serif;
+}
+
+.linea-1{
+    animation: Anim_linea1 5s ease infinite;
+}
+
+.linea-2{
+    animation: Anim_linea2 5s ease infinite;
+}
+
+.videojuegoImg{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    border: 2px solid rgb(126, 255, 143);
+    margin: 5% 0%;
+}
+
+.BDDImg{
+    width: 90px;
+    height: 90px;
+    border-radius: 100%;
+    border: 2px solid rgb(126, 255, 143);
+    margin: 5% 0%;
+}
+
+.NetImg{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    border: 2px solid rgb(126, 255, 143);
+    margin: 5% 0%;
+}
+
+.subtitulos p{
+    background-color: #161820;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 0px 10px 20% 10px;
+    box-shadow: 0px 1px 5px rgba(126, 255, 143, 180);
+}
+
+/*  TÍTULO POR ENCIMA DE LA PORTADA */
+main div h1{
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Roboto Mono', monospace;
+    color: #fff;
+}
+
+.mensaje-p1, .mensaje-p2, .mensaje-p3{
+    display: flex;
+}
+
+.mensaje-p1 p, .mensaje-p2 p, .mensaje-p3 p{
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Roboto Mono', monospace;
+  
+}
+
+.mensaje-p1{
+    visibility: hidden;
+    animation-delay: 2s;
+    animation-name: Anim_P1;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+.mensaje-p2{
+    visibility: hidden;
+    animation-delay: 6s;
+    animation-name: Anim_P2;
+    animation-duration: 6s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    position: absolute;
+}
+
+.mensaje-p3{
+    visibility: hidden;
+    animation-delay: 12s;
+    animation-name: Anim_P3;
+    animation-duration: 6s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    position: absolute;
+}
+
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.recomendado{
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Roboto Mono', monospace;
+    color: #fff;
+    margin: 20px;
+}
+
+.tarjetas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    width: 46%;
+    height: 135px;
+    font-family: 'Red Hat Text', sans-serif;
+    font-size: 10px;
+    margin: 1%;
+    text-align: center;
+}
+
+.tarjetas img{
+    width: 64px;
+    height: 64px;
+}
+
+footer{
+    display: flex;
+    background-color: rgb(45, 47, 48);
+    color: #959596c0;
+    text-align: center;
+    font-family: 'Red Hat Text', sans-serif;
+    font-size: 10px;
+
+}
+footer a{
+    text-decoration: none;
+    color: #959596c0;
+}
+
+/*  ANIMACIONES */
+@keyframes Anim_Botones{
+    0%{
+        border: 2px solid rgb(126, 255, 143);
+        color: rgb(126, 255, 143);
+        border-radius: 10px;
+    }
+    100%{
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        border-radius: 1px;
+        border-bottom: 2px solid rgb(126, 255, 143);
+        color: #fff;
+    }
+}
+
+@keyframes Anim_Header{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+@keyframes Anim_List{
+    from{
+        margin: 0;
+    }
+    to{
+        margin: 0px 2px;
+    }
+}
+
+@keyframes Anim_P1{
+    0%{
+        color: #fff;
+        visibility: visible;
+        display: contents;
+        opacity: 0%;
+        margin-right: 60%;
+        margin-bottom: 80%;
+    }
+    90%{
+        color: #fff;
+        opacity: 100%;
+        margin-right: 60%;
+        margin-bottom: 50%;
+        
+    }
+    100%{
+        color: #fff;
+        display: none;
+        opacity: 0%;
+        margin-right: 60%;
+        margin-bottom: 50%;
+    }
+}
+
+@keyframes Anim_P2{
+    0%{
+        visibility: visible;
+        display: contents;
+        opacity: 0%;
+        margin-left: 60%;
+        margin-top: 0%;
+        color: #fff;
+    }
+    90%{
+        opacity: 100%;
+        margin-left: 60%;
+        margin-top: 40%;
+        color: #fff;
+    }
+    100%{
+        display: none;
+        opacity: 0%;
+        margin-left: 60%;
+        margin-top: 40%;
+        color: #fff;
+    }
+}
+
+@keyframes Anim_P3{
+    0%{
+        visibility: visible;
+        display: contents;
+        opacity: 0%;
+        margin-right: 0%;
+        margin-top: 50%;
+        color: #fff;
+    }
+    90%{
+        opacity: 100%;
+        margin-right: 2%;
+        margin-top: 50%;
+        color: #fff;
+    }
+    100%{
+        display: none;
+        opacity: 0%;
+        margin-right: 2%;
+        margin-top: 50%;
+        color: #fff;
+    }
+}
+
+@keyframes Anim_linea1 {
+    0%{
+        width: 0%;
+        border-color: #fff;
+    }
+    50%{
+        width: 50%;
+        border-color: rgb(126, 255, 143);
+    }
+    100%{
+        width: 0%;
+        border-color: #fff;
+    }
+}
+
+@keyframes Anim_linea2 {
+    0%{
+        width: 80%;
+        border-color: #fff;
+    }
+    50%{
+        width: 0%;
+        border-color: rgb(126, 255, 143);
+    }
+    100%{
+        width: 80%;
+        border-color: #fff;
+    }
+}
+
+/*	MEDIA QUERIES	*/
+@media screen and (min-width:480px) and (max-width:768px){
+
+}
