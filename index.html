@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!--    METADATOS   -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--    TÍTULO   -->
+    <title>CubeCurses - Cursos Online</title>
+    
+    <!--    RECURSOS   -->
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+</head>
+<body>
+
+    <!--    ENCABEZADO CON MENÚ Y LOGO   -->
+    <header>
+        <a class="link-logo" href="#"><img src="img/Logo.png" alt="Logo" class="logo"><span class="NombreLogo">CubeCurses</span></a>
+        <nav class="menu">
+            <ul>
+                <li><a href="#" class="botonesMenu">Inicio</a></li>
+                <li><a href="#" class="botonesMenu">Cursos</a></li>
+                <li><a href="#" class="botonesMenu">Servicios</a></li>
+                <li><a href="#" class="botonesMenu">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--    PÁGINA PRINCIPAL    -->
+    <main>
+        <!--    TÍTULO Y PORTADA    -->
+        <div class="portada">
+            <h1>Cursos gratis de programaci&oacute;n</h1>
+            <!--    MENSAJES    -->
+            <div class="mensaje-p1">
+                <p>Empieza desde ya a programar con los cursos que tenemos para ti</p>
+            </div>
+            <div class="mensaje-p2">
+                <p class="p2">Aprende desde cero hasta un nivel más avanzado</p>
+            </div>
+            <div class="mensaje-p3">
+                <p class="p3">Es fácil, solo elige el que más te guste hay una gran variedad de cursos para elegir.</p>
+            </div>
+        </div>
+
+        <!--    SUBTÍTULOS      -->
+        <section class="subtitulos">
+            <!--    TEXTO 1     -->
+            <hr class="linea-1">
+            <h2>¿Quieres crear tu propio videojuego?</h2>
+            <hr class="linea-2">
+            <img class="videojuegoImg" src="data:image/png;base64,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">
+            <p>¡Puedes hacerlo! Aquí podras aprender a usar GDScript, un lenguaje similar a Pyhton hecho para el motor de videojuegos Godot Engine.</p>
+            
+            <!--    TEXTO 2     -->
+            <hr class="linea-1">
+            <h2>¿Necesitas aprender a manejar base datos?</h2>
+            <hr class="linea-2">
+            <img class="BDDImg" src="https://camo.githubusercontent.com/0c6f8ab951b851172d5408bae10bbc3d33e168a1/68747470733a2f2f692e6962622e636f2f73777173314e482f424244442e706e67">
+            <p>¡No hay problema! Te enseñaremos las nociones que necesites para crear y adminitrar bases de datos.</p>
+
+            <!--    TEXTO 3     -->
+            <hr class="linea-1">
+            <h2>¿Deseas ser desarrollador usando el Framework .NET?</h2>
+            <hr class="linea-2">
+            <img class="NetImg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/.NET_Core_Logo.svg/512px-.NET_Core_Logo.svg.png">
+            <p>¡Claro que puedes! Usando el lenguaje de programación de C# creado por Microsoft, está a tu disposición crear diferentes programas multiplataformas.</p>
+        </section>
+
+        <h2 class="recomendado">Lenguajes recomendados</h2>
+
+        <!--    TARJETAS DE CURSOS  -->
+        <div class="contenedor">
+	
+        <section class="tarjetas">
+		<a href="#"><img src="img/c.svg"></a>
+            <h3>Aprende a programar en C</h3>
+            <article>
+                <p>C es un lenguaje de bajo nivel que ...</p>
+            </article>
+        </section>
+	
+        <section class="tarjetas">
+            <img src="img/C++.png">
+            <h3>Aprende a programar en C++</h3>
+            <article>
+                <p>Lenguaje orientado a objetos, ...</p>
+            </article>
+        </section>
+	
+        <section class="tarjetas">
+            <img src="img/csharp.svg">
+            <h3>Aprende a programar en C#</h3>
+            <article>
+                <p>Usa el Framework .Net para crear ...</p>
+            </article>
+        </section>
+		
+        <section class="tarjetas">
+            <img src="img/python.png">
+            <h3>Aprende a programar en Python</h3>
+            <article>
+                <p>Con una facilidez para usar y trabajar...</p>
+            </article>
+        </section>
+	
+        </div>
+    </main>
+
+    <footer>
+        <p>AC GAMES - CubeCurses ©2022</p>
+        <p>T&eacute;rminos de pol&iacute;tica y privacidad</p>
+        <p>Contacto principal: <a href="#">anthonyzok521@gamil.com</a></p>
+    </footer>
+
+</body>
+</html>
